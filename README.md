@@ -77,8 +77,6 @@ Use the command above to check the buffer size. If it shows 4096, you need to in
 
 ```text
 stm32/
- ├── Core/
- ├── Drivers/
  ├── Inc/
  │    └── adc_set_mode.h
  └── Src/
@@ -86,9 +84,6 @@ stm32/
       └── adc_set_mode.c
 raspberrypi/
  ├── adc_receiver.py
- └── fft_test.py
-docs/
- └── wiring_diagram.png
 README.md
 ```
 
