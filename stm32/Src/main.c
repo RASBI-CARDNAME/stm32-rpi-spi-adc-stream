@@ -154,7 +154,7 @@ int main(void)
 				  flags[0] = 0;      // if failed, stop.
 			  }
 
-			  flags[1] = 0xFFFF; //prevent for stop work.
+			  flags[1] = 0xFFFF;
 			  break;
 		  }
 	  }
@@ -308,7 +308,7 @@ static void MX_ADC2_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_0;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_13CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
   {
     Error_Handler();
