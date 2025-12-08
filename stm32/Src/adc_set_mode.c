@@ -45,7 +45,7 @@ void SET_ADC_MODE(ADC_Mode_t mode, uint16_t* buffer, uint32_t buffer_size) {
 
 		sConfig.Channel = ADC_CHANNEL_0;
 		sConfig.Rank = ADC_REGULAR_RANK_1;
-		sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+		sConfig.SamplingTime = ADC_SAMPLETIME_13CYCLES_5;
 
 		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 		HAL_ADC_ConfigChannel(&hadc2, &sConfig);
@@ -66,7 +66,7 @@ void SET_ADC_MODE(ADC_Mode_t mode, uint16_t* buffer, uint32_t buffer_size) {
 
 		sConfig.Channel = ADC_CHANNEL_1;
 		sConfig.Rank = ADC_REGULAR_RANK_1;
-		sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+		sConfig.SamplingTime = ADC_SAMPLETIME_13CYCLES_5;
 
 		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 		HAL_ADC_ConfigChannel(&hadc2, &sConfig);
@@ -89,7 +89,7 @@ void SET_ADC_MODE(ADC_Mode_t mode, uint16_t* buffer, uint32_t buffer_size) {
 		//ch1
 		sConfig.Channel = ADC_CHANNEL_0;
 		sConfig.Rank = ADC_REGULAR_RANK_1;
-		sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+		sConfig.SamplingTime = ADC_SAMPLETIME_13CYCLES_5;
 
 		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 		HAL_ADC_ConfigChannel(&hadc2, &sConfig);
