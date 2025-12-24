@@ -90,6 +90,20 @@ kernel_module/
  ├──stm32_adc_driver.c
 README.md
 ```
+## Kernel Module Usage
+
+1. **Apply Device Tree**
+   - Compile the device tree into a `dtbo` file and apply it to the system.
+
+2. **Compile the Kernel Module**
+   - Navigate to the module directory and run `make` to compile the kernel module.
+
+3. **Load the Module**
+   - Load the generated `.ko` module using the `insmod` command.
+
+4. **Pin Map & Example**
+   - The pin map remains the same as before, and Python example code can be executed.
+
 
 ## 📜 License
 MIT License 
