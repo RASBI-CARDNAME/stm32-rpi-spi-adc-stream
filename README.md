@@ -84,6 +84,10 @@ stm32/
       └── adc_set_mode.c
 raspberrypi/
  ├── adc_receiver.py
+kernel_module/
+ ├──Makefile
+ ├──cli_monitor.py
+ ├──stm32_adc_driver.c
 README.md
 ```
 
