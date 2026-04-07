@@ -1,0 +1,28 @@
+# Build output
+Debug/
+Release/
+
+# Binary files
+*.elf
+*.bin
+*.hex
+*.map
+
+# Object / dependency files
+*.o
+*.d
+*.su
+
+# Libraries
+*.a
+*.lib
+
+# Logs
+*.log
+
+# Eclipse / STM32CubeIDE
+.metadata/
+.settings/
+
+# Debug configs (optional)
+*.launch
