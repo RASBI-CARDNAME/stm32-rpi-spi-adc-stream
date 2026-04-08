@@ -93,8 +93,19 @@ kernel_module/
 ├──Makefile
 ├──cli_monitor.py
 ├──stm32_adc_driver.c
+SPI_RTOS/
+├─....stm32project
+RPI_ADC_optimization/
+├─....stm32project
 README.md
 ```
+
+## 7-A 추가 프로젝트
+1. **최적화 버전**
+   - 플래그를 분리하여 최적화를 진행하였으며, 경쟁 상태를 개선한 버전.
+
+2. **RTOS 버전**
+   - 최적화 버전을 바탕으로 RTOS에 이식한 버전. SPI_RTOS 폴더에 프로젝트가 있습니다.
 
 ## 8. 커널 모듈 사용법
 
