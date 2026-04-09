@@ -21,7 +21,6 @@ typedef enum {
 	ADC_MODE_CH1,
 	ADC_MODE_CH2,
 	ADC_MODE_CH1_AND_CH2,
-	BUSY_STATUS
 }ADC_Mode_t;
 
 /* SPI Transfer mode (double buffering) */
@@ -30,13 +29,6 @@ typedef enum {
 	SPI_HALF_TRANSFER,
 	SPI_FULL_TRANSFER
 }SPI_Transfer_Mode_t;
-
-/* EXTI Status define */
-typedef enum {
-	WAITING_STATUS,
-	TRIGGERED,
-	REFRESH_FLAG = 0xFFFF
-}EXTI_Status_t;
 
 void set_adc_mode(ADC_Mode_t mode, uint16_t* buffer, uint32_t buffer_size);
 void get_adc_mode(uint16_t *current_flag);

@@ -139,15 +139,8 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  // 타이머 켜주고
   HAL_TIM_Base_Start(&htim3);
-  // adc는 함수에서 켜도록.따라서 스킵
-  // 변수 초기화 같은거 필요하면 하고
-
-  //LED 초기 상태 지정하고
   HAL_GPIO_WritePin(HeartBeat_LED_GPIO_Port, HeartBeat_LED_Pin, GPIO_PIN_SET);
-
-  //데이터 레디핀 리셋으로
   HAL_GPIO_WritePin(DATA_RDY_GPIO_Port, DATA_RDY_Pin, GPIO_PIN_RESET);
 
   /* USER CODE END 2 */
@@ -520,7 +513,14 @@ void StartDefaultTask(void *argument)
 		  continue;
 	  }
 
-	  /* Check Condition & Transmit BUFFER */
+	  /*
+	   *  Check Condition & Transmit BUFFER
+	   *
+	   * Since hspi1 DataSize is 16 bits,
+	   * the length refers to the “number of data items”
+	   *
+	   * */
+
 	  if (spi_transfer_flag == SPI_HALF_TRANSFER) {
 		  HAL_GPIO_TogglePin(DATA_RDY_GPIO_Port, DATA_RDY_Pin);
 		  HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *)buffer, BUFFER_SIZE/2);
